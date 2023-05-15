@@ -1,0 +1,27 @@
+docker ps -> lister les containeurs
+
+#Se connecter avec bash au containers
+
+docker exec -it nginx bash
+
+#Voir les utilisateurs de ma base de donnee:
+
+1) docker exec -it mariadb mysql -u root -p
+2) entrer mot de passe: wp_root
+3) SHOW DATABASES;
+4) USE my_database;
+5) SHOW TABLES;
+6) SELECT * FROM wp_users
+
+
+#Voir les images dockers
+
+docker images
+
+#Supprimer une image
+
+docker rmi ID
+
+#arreter toutes les images dockers
+
+docker stop $(docker ps -q)
