@@ -17,7 +17,7 @@ SRC				=	main.cpp \
 
 OBJS			=	$(SRC:.cpp=.o)
 
-CC				=	clang++
+CC				=	g++
 
 RM				=	rm -rf
 
