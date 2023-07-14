@@ -33,6 +33,6 @@ void	ft_check_arg(std::string file, std::string s1, std::string s2)
 	{
 		std::cout << "ERROR:" << std::endl;
 		std::cout << "PARAMETERS CAN'T BE EMPTY" << std::endl;
+		exit(0);
 	}
-	exit(0);
 }
