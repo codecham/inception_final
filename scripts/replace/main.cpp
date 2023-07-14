@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 		ft_print_error_file(argv[1]);
 	file_replace = argv[1];
 	file_replace += ".replace";
-	output_file.open(file_replace);
+	output_file.open(file_replace.c_str());
 	if (!output_file)
 		ft_print_error_file(file_replace);
 	while (std::getline(input_file, input_string))

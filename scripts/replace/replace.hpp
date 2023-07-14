@@ -16,6 +16,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstdlib>
+
 
 void	ft_print_error_file(std::string file_name);
 void	ft_print_error_param();
