@@ -25,7 +25,7 @@ services:
     restart : always
     working_dir: /var/www/html
     volumes:
-      - /home/dcorenti/data/wordpress:/var/www/html
+      - volume_wordpress:/var/www/html
     ports:
       - "9000:9000"
     networks:
@@ -41,11 +41,24 @@ services:
     restart : always
     working_dir: /var/lib/mysql
     volumes:
-      - /home/dcorenti/data/mariadb:/var/lib/mysql
+      - volume_mariadb:/var/lib/mysql
     ports:
       - "3306:3306"
     networks:
       - mynetwork
+
+volumes:
+  volume_mariadb:
+    driver_opts:
+      device: /home/dcorenti/data/mariadb
+      type: volume
+      o: bind
+  
+  volume_wordpress:
+    driver_opts:
+      device: /home/dcorenti/data/wordpress
+      type: volume
+      o: bind
 
 networks:
   mynetwork:
